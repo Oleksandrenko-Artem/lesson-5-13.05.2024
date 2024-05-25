@@ -58,42 +58,76 @@
 //     alert('Next time be careful!');
 // }
 
-const userPresent = prompt('What do you want to get on your birthday?');
-const isUserPresent = prompt('Have you changed your mind?');
+// const userPresent = prompt('What do you want to get on your birthday?');
+// const isUserPresent = prompt('Have you changed your mind?');
 
-if (isUserPresent) {
-    alert('Good, I go to find your present - ' + isUserPresent + '.');
+// if (isUserPresent) {
+//     alert('Good, I go to find your present - ' + isUserPresent + '.');
+// } else {
+//     alert('Good, think more.');
+// }
+
+// let amount = 0;
+
+// if (confirm('Is Sun a star?')) {
+//     amount = amount + 1;
+//     // amount++
+//     // amount--
+// }
+// if (!confirm('Is Moon a planet?')) {
+//     amount = amount + 1;
+//     // amount++
+//     // amount--
+// }
+// if (confirm('Is Milky Way a galaxy?')) {
+//     amount = amount + 1;
+//     // amount++
+//     // amount--
+// }
+// alert('Your result - ' + amount + ' points!');
+
+// if (confirm('Do you want to convert dollar to hryvna')) {
+//     const dollarAmount = prompt('Enter your dollar amount');
+//     const dollarRate = prompt('Enter dollar rate');
+//     const dollarConvert = dollarAmount * dollarRate;
+//     alert('It is - ' + dollarConvert + ' UAH');
+// } else {
+//     const hryvnaAmount = prompt('Enter your hryvna amount');
+//     const hryvnaRate = prompt('Enter hryvna rate');
+//     const hryvnaConvert = hryvnaAmount / hryvnaRate;
+//     alert('It is - ' + hryvnaConvert + ' USD');
+// }
+
+const userAge = prompt('Скільки вам років?')
+if (userAge <= 13) {
+    alert('Ви ще маленький і не зможете подивитись кіно!')
 } else {
-    alert('Good, think more.');
+    alert('Вам достатньо років і ви можете купляти квиток.')
 }
 
-let amount = 0;
-
-if (confirm('Is Sun a star?')) {
-    amount = amount + 1;
-    // amount++
-    // amount--
-}
-if (!confirm('Is Moon a planet?')) {
-    amount = amount + 1;
-    // amount++
-    // amount--
-}
-if (confirm('Is Milky Way a galaxy?')) {
-    amount = amount + 1;
-    // amount++
-    // amount--
-}
-alert('Your result - ' + amount + ' points!');
-
-if (confirm('Do you want to convert dollar to hryvna')) {
-    const dollarAmount = prompt('Enter your dollar amount');
-    const dollarRate = prompt('Enter dollar rate');
-    const dollarConvert = dollarAmount * dollarRate;
-    alert('It is - ' + dollarConvert + ' UAH');
+const firstNumber = prompt('Введіть перше число.')
+const secondNumber = prompt('Введіть друге число.')
+if (Number(firstNumber) > Number(secondNumber)) {
+    alert('Перше число більше.')
+} else if (Number(firstNumber) === Number(secondNumber)) {
+    alert('Числа однакові.')
 } else {
-    const hryvnaAmount = prompt('Enter your hryvna amount');
-    const hryvnaRate = prompt('Enter hryvna rate');
-    const hryvnaConvert = hryvnaAmount / hryvnaRate;
-    alert('It is - ' + hryvnaConvert + ' USD');
+    alert('Друге число більше.')
+}
+
+const accessPassword = 'password123'
+const userPassword = prompt('Введіть пароль користувача.')
+if (userPassword === accessPassword) {
+    alert('Пароль підійшов!')
+} else {
+    alert('Невірний пароль!')
+}
+
+const number = prompt('Введіть число.')
+if (Number(number) > 0) {
+    alert('Позитивне число.')
+} else if (Number(number) === 0) {
+    alert('Нейтральне число.')
+} else {
+    alert('Негативне число.')
 }
