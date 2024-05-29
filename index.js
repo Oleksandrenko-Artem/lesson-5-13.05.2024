@@ -98,36 +98,82 @@
 //     alert('It is - ' + hryvnaConvert + ' USD');
 // }
 
-const userAge = prompt('Скільки вам років?')
-if (userAge <= 13) {
-    alert('Ви ще маленький і не зможете подивитись кіно!')
+// const userAge = prompt('Скільки вам років?');
+// if (Number(userAge) < 13) {
+//     alert('Ви ще маленький і не зможете подивитись кіно!');
+// } else {
+//     alert('Вам достатньо років і ви можете купляти квиток.');
+// }
+
+// const firstNumber = prompt('Введіть перше число.');
+// const secondNumber = prompt('Введіть друге число.');
+// if (Number(firstNumber) > Number(secondNumber)) {
+//     alert('Перше число більше.');
+// } else if (Number(firstNumber) === Number(secondNumber)) {
+//     alert('Числа однакові.');
+// } else {
+//     alert('Друге число більше.');
+// }
+
+// const accessPassword = 'password123';
+// const userPassword = prompt('Введіть пароль користувача.');
+// if (userPassword === accessPassword) {
+//     alert('Пароль підійшов!');
+// } else {
+//     alert('Невірний пароль!');
+// }
+
+// const number = prompt('Введіть число.');
+// if (Number(number) > 0) {
+//     alert('Позитивне число.');
+// } else if (Number(number) === 0) {
+//     alert('Нейтральне число.');
+// } else {
+//     alert('Негативне число.');
+// }
+
+const number = prompt('Введіть число.');
+const remainder = number % 2;
+if (remainder === 0) {
+    console.log('Парне');
 } else {
-    alert('Вам достатньо років і ви можете купляти квиток.')
+    console.log('Непарне');
 }
 
-const firstNumber = prompt('Введіть перше число.')
-const secondNumber = prompt('Введіть друге число.')
-if (Number(firstNumber) > Number(secondNumber)) {
-    alert('Перше число більше.')
-} else if (Number(firstNumber) === Number(secondNumber)) {
-    alert('Числа однакові.')
+console.log(!true);
+console.log(!false);
+
+const userAgeInput = prompt('Введіть свій вік.');
+const startSchoolAge = 6;
+const endSchoolAge = 17;
+const userAge = Number(userAgeInput);
+if (userAge > startSchoolAge && userAge >= endSchoolAge) {
+    alert('Ви шкільного віку.')
 } else {
-    alert('Друге число більше.')
+    alert('Ви не шкільного віку.')
 }
 
-const accessPassword = 'password123'
-const userPassword = prompt('Введіть пароль користувача.')
-if (userPassword === accessPassword) {
-    alert('Пароль підійшов!')
+const numberInput = prompt('Введіть число.')
+const multipleNumber1 = numberInput % 3;
+const multipleNumber2 = numberInput % 7;
+if (multipleNumber1 === numberInput && multipleNumber2 === numberInput) {
+    alert('win!');
 } else {
-    alert('Невірний пароль!')
+    alert('lose(');
 }
 
-const number = prompt('Введіть число.')
-if (Number(number) > 0) {
-    alert('Позитивне число.')
-} else if (Number(number) === 0) {
-    alert('Нейтральне число.')
+const userInput = prompt('Enter number');
+console.log(userInput);
+const userNumber = Number(userInput);
+console.log(userNumber);
+//User cancel the window
+const error1 = userInput === null;
+//User sent nothing
+const error2 = userInput === '';
+//User enter words instead of numbers
+const error3 = Number.isNaN(userNumber);
+if (error1 || error2 || error3){
+    alert('Error.\n' + userInput + ' - not a number!');
 } else {
-    alert('Негативне число.')
+    alert('Thanks.');
 }
