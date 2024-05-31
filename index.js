@@ -132,48 +132,96 @@
 //     alert('Негативне число.');
 // }
 
-const number = prompt('Введіть число.');
-const remainder = number % 2;
-if (remainder === 0) {
-    console.log('Парне');
-} else {
-    console.log('Непарне');
-}
+// const number = prompt('Введіть число.');
+// const remainder = number % 2;
+// if (remainder === 0) {
+//     console.log('Парне');
+// } else {
+//     console.log('Непарне');
+// }
 
-console.log(!true);
-console.log(!false);
+// console.log(!true);
+// console.log(!false);
 
-const userAgeInput = prompt('Введіть свій вік.');
-const startSchoolAge = 6;
-const endSchoolAge = 17;
-const userAge = Number(userAgeInput);
-if (userAge > startSchoolAge && userAge >= endSchoolAge) {
-    alert('Ви шкільного віку.')
-} else {
-    alert('Ви не шкільного віку.')
-}
+// const userAgeInput = prompt('Введіть свій вік.');
+// const startSchoolAge = 6;
+// const endSchoolAge = 17;
+// const userAge = Number(userAgeInput);
+// if (userAge > startSchoolAge && userAge >= endSchoolAge) {
+//     alert('Ви шкільного віку.')
+// } else {
+//     alert('Ви не шкільного віку.')
+// }
 
-const numberInput = prompt('Введіть число.')
-const multipleNumber1 = numberInput % 3;
-const multipleNumber2 = numberInput % 7;
-if (multipleNumber1 === numberInput && multipleNumber2 === numberInput) {
-    alert('win!');
-} else {
-    alert('lose(');
-}
+// const numberInput = prompt('Введіть число.')
+// const multipleNumber1 = numberInput % 3;
+// const multipleNumber2 = numberInput % 7;
+// if (multipleNumber1 === numberInput && multipleNumber2 === numberInput) {
+//     alert('win!');
+// } else {
+//     alert('lose(');
+// }
 
-const userInput = prompt('Enter number');
-console.log(userInput);
-const userNumber = Number(userInput);
-console.log(userNumber);
-//User cancel the window
-const error1 = userInput === null;
-//User sent nothing
-const error2 = userInput === '';
-//User enter words instead of numbers
-const error3 = Number.isNaN(userNumber);
-if (error1 || error2 || error3){
-    alert('Error.\n' + userInput + ' - not a number!');
-} else {
-    alert('Thanks.');
-}
+// const userInput = prompt('Enter number');
+// console.log(userInput);
+// const userNumber = Number(userInput);
+// console.log(userNumber);
+// //User cancel the window
+// const error1 = userInput === null;
+// //User sent nothing
+// const error2 = userInput === '';
+// //User enter words instead of numbers
+// const error3 = Number.isNaN(userNumber);
+// if (error1 || error2 || error3){
+//     alert('Error.\n' + userInput + ' - not a number!');
+// } else {
+//     alert('Thanks.');
+// }
+
+// const inputFirstNumber = prompt('Enter first number.');
+// const inputSecondNumber = prompt('Enter second number.');
+// const firstNumber = Number(inputFirstNumber);
+// const secondNumber = Number(inputSecondNumber);
+// if (firstNumber > 0 && secondNumber > 0) {
+//     alert('All numbers positive.');
+// } else if (firstNumber < 0 && secondNumber < 0) {
+//     alert('All numbers negative.');
+// } else if (firstNumber === 0 && secondNumber === 0) {
+//     alert('All numbers neutral.');
+// } else {
+//     alert('Numbers with different signs.');
+// }
+
+// const sum = prompt('Введіть суму.');
+// const minSum = 1000;
+// let delivery;
+// if (Number(sum) > minSum) {
+//     let delivery = 0;
+//     alert('Ваша сума більша за 1000 грн, тому доставка - ' + delivery + ' грн.');
+// } else {
+//     let delivery = 500;
+//     alert('Платіть за доставку: ' + delivery + ' грн.');
+// }
+
+// let delivery1 = (Number(sum) > minSum) ? 0 : 500;
+
+// const number = prompt('Введіть число.');
+// let number1 = (Number(number) % 2 === 0) ? 'Парне.' : 'Непарне.';
+// alert(number + ' - ' + number1);
+
+const price = 100;
+const inputUserAge = prompt('Введіть свій вік.');
+const userAge = Number(inputUserAge);
+const sale = (userAge < 18 || userAge > 65) ? 10 : 0;
+const summaCheck = price - (price * sale / 100);
+alert(summaCheck);
+
+const inputNumber = prompt('Введіть число, щоб знайти його модуль.');
+const number = Number(inputNumber);
+const module = (number >= 0) ? number : -number;
+alert(module);
+
+const userInput1 = prompt('Введіть першу довжину сторони прямокутника.');
+const userInput2 = prompt('Введіть другу довжину сторону прямокутника.');
+const rectangleWidth = (userInput1 === userInput2) ? 'Квадрат' : 'Прямокутник';
+alert(rectangleWidth);
