@@ -209,19 +209,164 @@
 // let number1 = (Number(number) % 2 === 0) ? 'Парне.' : 'Непарне.';
 // alert(number + ' - ' + number1);
 
-const price = 100;
-const inputUserAge = prompt('Введіть свій вік.');
-const userAge = Number(inputUserAge);
-const sale = (userAge < 18 || userAge > 65) ? 10 : 0;
-const summaCheck = price - (price * sale / 100);
-alert(summaCheck);
+// const price = 100;
+// const inputUserAge = prompt('Введіть свій вік.');
+// const userAge = Number(inputUserAge);
+// const sale = (userAge < 18 || userAge > 65) ? 10 : 0;
+// const summaCheck = price - (price * sale / 100);
+// alert(summaCheck);
 
-const inputNumber = prompt('Введіть число, щоб знайти його модуль.');
-const number = Number(inputNumber);
-const module = (number >= 0) ? number : -number;
-alert(module);
+// const inputNumber = prompt('Введіть число, щоб знайти його модуль.');
+// const number = Number(inputNumber);
+// const module = (number >= 0) ? number : -number;
+// alert(module);
 
-const userInput1 = prompt('Введіть першу довжину сторони прямокутника.');
-const userInput2 = prompt('Введіть другу довжину сторону прямокутника.');
-const rectangleWidth = (userInput1 === userInput2) ? 'Квадрат' : 'Прямокутник';
-alert(rectangleWidth);
+// const userInput1 = prompt('Введіть першу довжину сторони прямокутника.');
+// const userInput2 = prompt('Введіть другу довжину сторону прямокутника.');
+// const rectangleWidth = (userInput1 === userInput2) ? 'Квадрат' : 'Прямокутник';
+// alert(rectangleWidth);
+
+const message=` Введи мову, якою хочеш спілкуватися:
+1) українська - ua
+2) англійська - en
+3) польска - pl
+4) іспанська - es
+5) французька - fr
+`;
+
+const lang = prompt(message);
+
+switch (lang) {
+    case 'ua':
+    case '1':
+    case 'українська':
+        alert('привіт');
+        break;
+    case 'en':
+    case '2':
+    case 'англійська':
+        alert('hi');
+        break;
+    case 'pl':
+    case '3':
+    case 'польська':
+        alert('cześć');
+        break;
+    case 'es':
+    case '4':
+    case 'іспанська':
+        alert('hola');
+        break;
+    case 'fr':
+    case '5':
+    case 'французька':
+        alert('bonjour');
+        break;
+    default:
+        alert('Мова не підтримується.');
+        break;
+}
+if (lang === 'ua' || lang === '1' || lang === 'українська') {
+    alert('привіт');
+} else if(lang === 'en' || lang === '2' || lang === 'англійська') {
+    alert('hi');
+} else if (lang === 'pl' || lang === '3' || lang === 'польська') {
+    alert('cześć');
+} else if (lang === 'es' || lang === '4' || lang === 'іспанська') {
+    alert('hola');
+} else if (lang === 'fr' || lang === '5' || lang === 'французька') {
+    alert('bonjour');
+} else {
+    alert('Ви нічого не ввели.');
+}
+
+switch (confirm('Ви хочете покинути сайт?')) {
+    case true:
+        alert('Допобачення!');
+        break;
+    case false:
+        alert('Ми раді, що ви лишаєтесь з нами!');
+        break;
+}
+
+confirm('Ви хочете покинути сайт?')
+    ? alert('Допобачення!')
+    : alert('Ми раді, що ви лишаєтесь з нами!');
+    
+switch (confirm('Введіть число від 1 до 7.')) {
+    case '1':
+        alert('Monday');
+        break;
+    case '2':
+        alert('Tuesday');
+        break;
+    case '3':
+        alert('Wednesday');
+        break;
+    case '4':
+        alert('Thursday');
+        break;
+    case '5':
+        alert('Friday');
+        break;
+    case '6':
+        alert('Saturday');
+        break;
+    case '7':
+        alert('Sunday');
+        break;
+    default:
+        alert('Треба було вводити числа від 1 до 7!');
+        break;
+}
+
+switch (confirm('Введіть ще раз числа від 1 до 7.')) {
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+        alert('Робочі дні тижня.');
+        break;
+    case '6':
+    case '7':
+        alert('Вихіднф дні тижня.');
+        break;
+    default:
+        alert('Не має такого дня тижня!');
+        break;
+}
+
+const firstNumber = prompt('Введи перше число.');
+const secondNumber = prompt('Введи друге число.');
+
+const number1 = Number(firstNumber);
+const number2 = Number(secondNumber);
+
+const operator = prompt('Введи дію: +, -, *, /, % ');
+
+switch (operator) {
+    case '+':
+        const result1 = number1 + number2;
+        alert(number1 + ' + ' + number2 + ' = ' + result1);
+        break;
+    case '-':
+        const result2 = number1 - number2;
+        alert(number1 + ' - ' + number2 + ' = ' + result2);
+        break;
+    case '*':
+        const result3 = number1 * number2;
+        alert(number1 + ' * ' + number2 + ' = ' + result3);
+        break;
+    case '/':
+        const result4 = number1 / number2;
+        alert(number1 + ' / ' + number2 + ' = ' + result4);
+        break;
+    case '%':
+        const result5 = number1 % number2;
+        alert(number1 + ' % ' + number2 + ' = ' + result5);
+        break;
+    default:
+        alert('Такої дії не існує!');
+        break;
+}
