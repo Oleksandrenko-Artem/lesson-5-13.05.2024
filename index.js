@@ -411,27 +411,98 @@
 //     }
 // }
 
-while (true) {
-    const userInput = prompt('Введіть будьщо.');
-    if (userInput === null || userInput === '') {
-        alert('Дякую.');
-        break;
-    }
-}
+// while (true) {
+//     const userInput = prompt('Введіть будьщо.');
+//     if (userInput === null || userInput === '') {
+//         alert('Дякую.');
+//         break;
+//     }
+// }
 
-const secretNumber = 8;
+// const secretNumber = 8;
 
-while (true) {
-    const inputUserNumber = prompt('Enter secret number.');
-    const inputNumber = Number(inputUserNumber);
-    if (inputUserNumber.trim === '' || inputUserNumber === null || Number.isNaN(inputNumber)) {
-        alert("Wrong answer.");
-    } else if (inputNumber === secretNumber) {
-        alert('Correct answer!');
+// while (true) {
+//     const inputUserNumber = prompt('Enter secret number.');
+//     const inputNumber = Number(inputUserNumber);
+//     if (inputUserNumber.trim === '' || inputUserNumber === null || Number.isNaN(inputNumber)) {
+//         alert("Wrong answer.");
+//     } else if (inputNumber === secretNumber) {
+//         alert('Correct answer!');
+//         break;
+//     } else if (inputNumber < secretNumber) {
+//         alert('Secret number bigger.');
+//     } else {
+//         alert('Secret number less.');
+//     }
+// }
+
+// for (let i = 0; i < 5; i++){
+//     console.log(i);
+// }
+
+// let i = 0;
+// while (i < 5) {
+//     console.log(i);
+//     i++;
+// }
+
+// for (let i = 5; i > 0; i--){
+//     console.log(i);
+// }
+
+// for (let i = 10; i < 50; i++){
+//     const multipleNumber = i % 7;
+//     if (multipleNumber === 0) {
+//         console.log(i);
+//     }
+// }
+
+// const start = 5;
+// const end = 10;
+
+// let summa = 0;
+
+// for (let i = start; i < end; i++){
+//     // console.log(i);
+//     summa += i;
+//     // summa = summa + i;
+// }
+// console.log(summa);
+
+// const start = 5;
+// const end = 10;
+
+// let summa = 1;
+
+// for (let i = start; i < end; i++){
+//     summa = summa * i;
+// }
+// console.log(summa);
+
+// const start = 0;
+// const end = 10;
+
+// let summa = 0;
+// let mult = 1;
+
+// for (i = start; i <= end; i++){
+//     if (i % 2 === 0) {
+//         summa += i;
+//     } else {
+//         mult *= i;
+//     }
+// }
+// console.log('summa - ' + summa);
+// console.log('mult - ' + mult);
+
+const password = '12345';
+const maxTry = 3;
+for (let i = 0; i < maxTry; i++){
+    const passwordInput = prompt('Enter password to continue.');
+    if (passwordInput === password) {
+        alert('Welcome!');
         break;
-    } else if (inputNumber < secretNumber) {
-        alert('Secret number bigger.');
     } else {
-        alert('Secret number less.');
+        alert('You have - ' + (maxTry - i - 1) + ' attempts');
     }
 }
