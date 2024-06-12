@@ -495,14 +495,92 @@
 // console.log('summa - ' + summa);
 // console.log('mult - ' + mult);
 
-const password = '12345';
-const maxTry = 3;
-for (let i = 0; i < maxTry; i++){
-    const passwordInput = prompt('Enter password to continue.');
-    if (passwordInput === password) {
-        alert('Welcome!');
-        break;
-    } else {
-        alert('You have - ' + (maxTry - i - 1) + ' attempts');
+// const password = '12345';
+// const maxTry = 3;
+// for (let i = 0; i < maxTry; i++){
+//     const passwordInput = prompt('Enter password to continue.');
+//     if (passwordInput === password) {
+//         alert('Welcome!');
+//         break;
+//     } else {
+//         alert('You have - ' + (maxTry - i - 1) + ' attempts');
+//     }
+// }
+
+// const start = 10;
+// const end = 20;
+
+// const secretNumber = 13;
+// for (let i = start; i < end; i++){
+//     if (i === secretNumber) {
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+// while (true) {
+//     const userInput = prompt('Enter number.')
+//     if (userInput === null) {
+//         alert('Be attentive!');
+//         continue;
+//     }
+//     if (userInput === secretNumber) {
+//         alert('Your answer is right.');
+//         break;
+//     }
+// }
+
+// const number1 = 8;
+// const number2 = 10;
+
+// const result = number1 * number2;
+// while (true) {
+//     const inputNumber = prompt(`Скільки буде
+//         ${number1} * ${number2}`);
+//     if (inputNumber === null || inputNumber.trim() === '') {
+//         alert('Будь уважним!');
+//         continue;
+//     }
+//     if (inputNumber === result) {
+//         alert('Добре!');
+//         break;
+//     }
+//     alert('Спробуй ще!');
+// }
+
+// const start = 15;
+// const end = 25;
+
+// for (let i = start; i < end; i++){
+//     if (i % 4 === 0 && i % 5 === 0) {
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+// const start = 1;
+// const end = 10;
+
+// let summa = 0;
+
+// for (let i = start; i <= end; i++){
+//     if (i % 2 === 0 || i % 3 === 0) {
+//         continue;
+//     }
+//     summa += i
+// }
+// console.log(summa);
+
+// const number = 8;
+
+// for (let i = 1; i <= 10; i++){
+//     console.log(`${number} * ${i} = ${number * i}`);
+// }
+
+for (let num1 = 1; num1 <= 10; num1++){
+    console.group(num1);
+    for (let num2 = 1; num2 <= 10; num2++){
+        console.log(`${num1} * ${num2} = ${num1 * num2}`);
     }
+    console.groupEnd();
 }
