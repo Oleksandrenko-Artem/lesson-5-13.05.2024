@@ -577,10 +577,63 @@
 //     console.log(`${number} * ${i} = ${number * i}`);
 // }
 
-for (let num1 = 1; num1 <= 10; num1++){
-    console.group(num1);
-    for (let num2 = 1; num2 <= 10; num2++){
-        console.log(`${num1} * ${num2} = ${num1 * num2}`);
-    }
-    console.groupEnd();
+// for (let num1 = 1; num1 <= 10; num1++){
+//     console.group(num1);
+//     for (let num2 = 1; num2 <= 10; num2++){
+//         console.log(`${num1} * ${num2} = ${num1 * num2}`);
+//     }
+//     console.groupEnd();
+// }
+
+function logHi() {
+    console.log('Hi');
 }
+
+logHi();
+logHi();
+logHi();
+logHi();
+logHi();
+logHi();
+
+function logMessage(message) {
+    console.log(message);
+}
+
+function logForUser(userName, word) {
+    console.log(`${word}, ${userName}!`);
+}
+logForUser('Bill', 'Hi');
+logForUser('Tom', 'Ciao');
+logForUser('Anna', 'Halo');
+
+// Порядок створення параметрів в функції повинен збігатися з порядком передачі аргументів в функцію
+
+function logSquareNumber(number) {
+    console.log(number*number);
+}
+logSquareNumber(4);
+logSquareNumber(8);
+
+function logNumbersDiapazon(start, end) {
+    for (let i = start; i < end; i++){
+        console.log(i);
+    }
+}
+
+logNumbersDiapazon(1, 5);
+
+/**
+ * 
+ * @param {number} amount defolt value 1
+ * @param {string} draw defolt value ':)'
+ */
+function drawCat(amount = 1, draw = ':)') {
+    for (let i = 1; i <= amount; i++){
+        console.log(i, draw);
+    }
+}
+
+drawCat(3, ':|');
+drawCat();
+drawCat(undefined, '=^.^=');
