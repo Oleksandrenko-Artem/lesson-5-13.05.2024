@@ -585,55 +585,162 @@
 //     console.groupEnd();
 // }
 
-function logHi() {
-    console.log('Hi');
-}
+// function logHi() {
+//     console.log('Hi');
+// }
 
-logHi();
-logHi();
-logHi();
-logHi();
-logHi();
-logHi();
+// logHi();
+// logHi();
+// logHi();
+// logHi();
+// logHi();
+// logHi();
 
-function logMessage(message) {
-    console.log(message);
-}
+// function logMessage(message) {
+//     console.log(message);
+// }
 
-function logForUser(userName, word) {
-    console.log(`${word}, ${userName}!`);
-}
-logForUser('Bill', 'Hi');
-logForUser('Tom', 'Ciao');
-logForUser('Anna', 'Halo');
+// function logForUser(userName, word) {
+//     console.log(`${word}, ${userName}!`);
+// }
+// logForUser('Bill', 'Hi');
+// logForUser('Tom', 'Ciao');
+// logForUser('Anna', 'Halo');
 
-// Порядок створення параметрів в функції повинен збігатися з порядком передачі аргументів в функцію
+// // Порядок створення параметрів в функції повинен збігатися з порядком передачі аргументів в функцію
 
-function logSquareNumber(number) {
-    console.log(number*number);
-}
-logSquareNumber(4);
-logSquareNumber(8);
+// function logSquareNumber(number) {
+//     console.log(number*number);
+// }
+// logSquareNumber(4);
+// logSquareNumber(8);
 
-function logNumbersDiapazon(start, end) {
-    for (let i = start; i < end; i++){
-        console.log(i);
-    }
-}
+// function logNumbersDiapazon(start, end) {
+//     for (let i = start; i < end; i++){
+//         console.log(i);
+//     }
+// }
 
-logNumbersDiapazon(1, 5);
+// logNumbersDiapazon(1, 5);
+
+// /**
+//  *
+//  * @param {number} amount defolt value 1
+//  * @param {string} draw defolt value ':)'
+//  */
+// function drawCat(amount = 1, draw = ':)') {
+//     for (let i = 1; i <= amount; i++){
+//         console.log(i, draw);
+//     }
+// }
+
+// drawCat(3, ':|');
+// drawCat();
+// drawCat(undefined, '=^.^=');
+
+// /**
+//  *
+//  * @param {number} number1
+//  * @param {number} number2
+//  * @returns {number}
+//  */
+// function addTwoNumbers(number1 = 0, number2 = 0) {
+//     const summa = number1 + number2;
+//     return summa;
+// }
+
+// const result = addTwoNumbers(7, 2);
+// console.log(result);
+
+// console.log(addTwoNumbers(4, 9));
+
+// /**
+//  *
+//  * @param {number} side
+//  * @returns {number}
+//  */
+// function getAreaSquare(side) {
+//     const area = side * side;
+//     return area;
+// }
+
+// /**
+//  *
+//  * @param {number} start
+//  * @param {number} end
+//  * @returns {number}
+//  */
+// function diapazonSum(start, end) {
+//     for (let i = start; i < end; i++){
+//         summa += i;
+//     }
+//     return summa;
+// }
+// console.log(diapazonSum(1, 6));
+
+// /**
+//  *
+//  * @param {number} number
+//  * @returns {string}
+//  */
+// function getSignNumber(number) {
+//     if (number > 0) {
+//         return 'pozitive';
+//     }
+//     if (number < 0) {
+//         return 'negative';
+//     }
+//     return 'zero';
+// }
+
+// console.log(getSignNumber(5));
+// console.log(getSignNumber(-5));
+// console.log(getSignNumber(0));
+
+// function getNumber(number) {
+//     if (number % 2 === 0) {
+//         return 'Парне'
+//     }
+//     return 'Непарне'
+// }
 
 /**
  * 
- * @param {number} amount defolt value 1
- * @param {string} draw defolt value ':)'
+ * @param {number} number 
+ * @returns {string}
  */
-function drawCat(amount = 1, draw = ':)') {
-    for (let i = 1; i <= amount; i++){
-        console.log(i, draw);
+function getNumber2(number) {
+    return number % 2 === 0 ? 'even' : 'odd';
+}
+
+console.log(getNumber2(6))
+
+function getTwoNumbers(number1, number2) {
+    if (number1 >= number2){
+        return number1;
+    }
+    return number2;
+}
+
+console.log(getTwoNumbers(6, 4));
+
+/**
+ * 
+ * @param {number} number1 
+ * @param {number} number2 
+ * @param {number} number3 
+ * @returns {number}
+ */
+function getThreeNumbers(number1, number2, number3) {
+    if (number1 < number2 && number1 < number3) {
+        return number1;
+    }
+    if (number2 < number1 && number2 < number3) {
+        return number2;
+    }
+    if (number3 < number1 && number3 < number2) {
+        return number3;
     }
 }
 
-drawCat(3, ':|');
-drawCat();
-drawCat(undefined, '=^.^=');
+console.log(getThreeNumbers(3, 8, 9));
