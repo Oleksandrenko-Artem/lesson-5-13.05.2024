@@ -704,43 +704,77 @@
 //     return 'Непарне'
 // }
 
-/**
- * 
- * @param {number} number 
- * @returns {string}
- */
-function getNumber2(number) {
-    return number % 2 === 0 ? 'even' : 'odd';
-}
+// /**
+//  * 
+//  * @param {number} number 
+//  * @returns {string}
+//  */
+// function getNumber2(number) {
+//     return number % 2 === 0 ? 'even' : 'odd';
+// }
 
-console.log(getNumber2(6))
+// console.log(getNumber2(6))
 
-function getTwoNumbers(number1, number2) {
-    if (number1 >= number2){
-        return number1;
+// function getTwoNumbers(number1, number2) {
+//     if (number1 >= number2){
+//         return number1;
+//     }
+//     return number2;
+// }
+
+// console.log(getTwoNumbers(6, 4));
+
+// /**
+//  * 
+//  * @param {number} number1 
+//  * @param {number} number2 
+//  * @param {number} number3 
+//  * @returns {number}
+//  */
+// function getThreeNumbers(number1, number2, number3) {
+//     if (number1 < number2 && number1 < number3) {
+//         return number1;
+//     }
+//     if (number2 < number1 && number2 < number3) {
+//         return number2;
+//     }
+//     if (number3 < number1 && number3 < number2) {
+//         return number3;
+//     }
+// }
+
+// console.log(getThreeNumbers(3, 8, 9));
+
+const phone = {
+    brand: 'Blackview',
+    model: 'BV5500Plus',
+    price: 3000,
+    aboutPhone() {
+        return `${this.brand} ${this.model} ${this.price}`;
     }
-    return number2;
-}
+};
+console.log(phone.aboutPhone());
 
-console.log(getTwoNumbers(6, 4));
+const country = {
+    capital: 'Kyiv',
+    area: '608628',
+    population: '40000000',
+    populationArea: '78',
+    aboutCountry() {
+        return `${this.capital} ${this.area} ${this.population} ${this.populationArea}`
+    }
+};
+console.log(country.aboutCountry());
 
-/**
- * 
- * @param {number} number1 
- * @param {number} number2 
- * @param {number} number3 
- * @returns {number}
- */
-function getThreeNumbers(number1, number2, number3) {
-    if (number1 < number2 && number1 < number3) {
-        return number1;
+const rectangle = {
+    width: 180,
+    height: 180,
+    getArea() {
+        return (this.width) * this.height
+    },
+    getPerimetr() {
+        return this.width * 2 + this.height * 2
     }
-    if (number2 < number1 && number2 < number3) {
-        return number2;
-    }
-    if (number3 < number1 && number3 < number2) {
-        return number3;
-    }
-}
-
-console.log(getThreeNumbers(3, 8, 9));
+};
+console.log(rectangle.getArea());
+console.log(rectangle.getPerimetr());
