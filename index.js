@@ -745,36 +745,88 @@
 
 // console.log(getThreeNumbers(3, 8, 9));
 
-const phone = {
-    brand: 'Blackview',
-    model: 'BV5500Plus',
-    price: 3000,
-    aboutPhone() {
-        return `${this.brand} ${this.model} ${this.price}`;
-    }
-};
-console.log(phone.aboutPhone());
+// const phone = {
+//     brand: 'Blackview',
+//     model: 'BV5500Plus',
+//     price: 3000,
+//     aboutPhone() {
+//         return `${this.brand} ${this.model} ${this.price}`;
+//     }
+// };
+// console.log(phone.aboutPhone());
 
-const country = {
-    capital: 'Kyiv',
-    area: '608628',
-    population: '40000000',
-    populationArea: '78',
-    aboutCountry() {
-        return `${this.capital} ${this.area} ${this.population} ${this.populationArea}`
-    }
-};
-console.log(country.aboutCountry());
+// const country = {
+//     capital: 'Kyiv',
+//     area: '608628',
+//     population: '40000000',
+//     populationArea: '78',
+//     aboutCountry() {
+//         return `${this.capital} ${this.area} ${this.population} ${this.populationArea}`
+//     }
+// };
+// console.log(country.aboutCountry());
 
-const rectangle = {
-    width: 180,
-    height: 180,
-    getArea() {
-        return (this.width) * this.height
-    },
-    getPerimetr() {
-        return this.width * 2 + this.height * 2
+// const rectangle = {
+//     width: 180,
+//     height: 180,
+//     getArea() {
+//         return (this.width) * this.height
+//     },
+//     getPerimetr() {
+//         return this.width * 2 + this.height * 2
+//     }
+// };
+// console.log(rectangle.getArea());
+// console.log(rectangle.getPerimetr());
+
+/**
+ * 
+ * @param {string} brand 
+ * @param {string} model 
+ * @param {number} price 
+ */
+function Phone(brand, model, price) {
+    this.brand === brand;
+    this.model === model;
+    this.price === price;
+    this.getDetails = function () {
+        return `${brand} ${model} costs ${price}`
     }
-};
-console.log(rectangle.getArea());
-console.log(rectangle.getPerimetr());
+}
+
+const phone1 = new Phone('Blackview', 'BV5500Plus', 3000);
+console.log(phone1.getDetails());
+
+/**
+ * 
+ * @param {string} title 
+ * @param {string} director 
+ * @param {number} releaseYear 
+ */
+function Movie(title, director, releaseYear) {
+    this.title === title;
+    this.director === director;
+    this.releaseYear === releaseYear;
+    this.getPoster = function () {
+        return `${title} directed by ${director} (${releaseYear})`
+    };
+}
+
+const movie1 = new Movie('The Boys', 'Director', 2000);
+console.log(movie1.getPoster());
+
+function City(name, country, population) {
+    this.name === name;
+    this.country === country;
+    this.population === population;
+    this.toString = function () {
+        return `City is ${name} in country ${country}`
+    };
+    this.getFullInfo = function () {
+        return `City is ${name} in country ${country} with a population ${population}`
+    };
+}
+
+const city1 = new City('Zaporozhye', 'Ukraine', '2000000');
+console.log(city1.getFullInfo());
+console.log(city1.toString());
