@@ -705,8 +705,8 @@
 // }
 
 // /**
-//  * 
-//  * @param {number} number 
+//  *
+//  * @param {number} number
 //  * @returns {string}
 //  */
 // function getNumber2(number) {
@@ -725,10 +725,10 @@
 // console.log(getTwoNumbers(6, 4));
 
 // /**
-//  * 
-//  * @param {number} number1 
-//  * @param {number} number2 
-//  * @param {number} number3 
+//  *
+//  * @param {number} number1
+//  * @param {number} number2
+//  * @param {number} number3
 //  * @returns {number}
 //  */
 // function getThreeNumbers(number1, number2, number3) {
@@ -779,54 +779,137 @@
 // console.log(rectangle.getArea());
 // console.log(rectangle.getPerimetr());
 
-/**
- * 
- * @param {string} brand 
- * @param {string} model 
- * @param {number} price 
- */
-function Phone(brand, model, price) {
-    this.brand === brand;
-    this.model === model;
-    this.price === price;
-    this.getDetails = function () {
-        return `${brand} ${model} costs ${price}`
-    }
-}
+// /**
+//  *
+//  * @param {string} brand
+//  * @param {string} model
+//  * @param {number} price
+//  */
+// function Phone(brand, model, price) {
+//     this.brand === brand;
+//     this.model === model;
+//     this.price === price;
+//     this.getDetails = function () {
+//         return `${brand} ${model} costs ${price}`
+//     }
+// }
 
-const phone1 = new Phone('Blackview', 'BV5500Plus', 3000);
-console.log(phone1.getDetails());
+// const phone1 = new Phone('Blackview', 'BV5500Plus', 3000);
+// console.log(phone1.getDetails());
+
+// /**
+//  *
+//  * @param {string} title
+//  * @param {string} director
+//  * @param {number} releaseYear
+//  */
+// function Movie(title, director, releaseYear) {
+//     this.title === title;
+//     this.director === director;
+//     this.releaseYear === releaseYear;
+//     this.getPoster = function () {
+//         return `${title} directed by ${director} (${releaseYear})`
+//     };
+// }
+
+// const movie1 = new Movie('The Boys', 'Director', 2000);
+// console.log(movie1.getPoster());
+
+// function City(name, country, population) {
+//     this.name === name;
+//     this.country === country;
+//     this.population === population;
+//     this.toString = function () {
+//         return `City is ${name} in country ${country}`
+//     };
+//     this.getFullInfo = function () {
+//         return `City is ${name} in country ${country} with a population ${population}`
+//     };
+// }
+
+// const city1 = new City('Zaporozhye', 'Ukraine', '2000000');
+// console.log(city1.getFullInfo());
+// console.log(city1.toString());
+
+// function User(name, age, isMale) {
+//     this.name = name;
+//     this.age = age;
+//     this.isMale = isMale;
+// }
+// function UserPrototype() {
+//     this.getName = function () {
+//         return this.name;
+//     }
+//     this.getInfo = function () {
+//         return `${this.name} is ${this.age} years old`;
+//     }
+//     this.getGender = function () {
+//         return this.isMale ? 'male' : 'female';
+//     }
+// }
+// User.prototype = new UserPrototype();
+// const user1 = new User('Alex', 20, true);
+// console.log(user1.getInfo());
+// console.log(user1.getGender());
+// const user2 = new User('Maria', 20, false);
+// console.log(user2.getInfo());
+// console.log(user2.getGender());
+
+// /**
+//  *
+//  * @param {number} radius
+//  */
+// function Circle(radius) {
+//     this.radius = radius;
+// }
+// function CircleMethods() {
+//     this.getArea = function () {
+//         return Math.PI * this.radius * this.radius;
+//     }
+//     this.getPerimetr = function() {
+//         return 2 * Math.PI * this.radius;
+//     }
+//     this.getDiametr = function () {
+//         return 2 * this.radius;
+//     }
+// }
+// Circle.prototype = new CircleMethods();
+// const circle1 = new Circle(20)
+// console.log(circle1.getArea());
+// console.log(circle1.getPerimetr());
+// console.log(circle1.getDiametr());
 
 /**
  * 
  * @param {string} title 
- * @param {string} director 
- * @param {number} releaseYear 
+ * @param {number} price 
+ * @param {number} amount 
  */
-function Movie(title, director, releaseYear) {
-    this.title === title;
-    this.director === director;
-    this.releaseYear === releaseYear;
-    this.getPoster = function () {
-        return `${title} directed by ${director} (${releaseYear})`
-    };
+function Product(title, price, amount) {
+    this.title = title;
+    this.price = price;
+    this.amount = amount;
 }
-
-const movie1 = new Movie('The Boys', 'Director', 2000);
-console.log(movie1.getPoster());
-
-function City(name, country, population) {
-    this.name === name;
-    this.country === country;
-    this.population === population;
-    this.toString = function () {
-        return `City is ${name} in country ${country}`
-    };
-    this.getFullInfo = function () {
-        return `City is ${name} in country ${country} with a population ${population}`
-    };
+function ProductPrototype() {
+    this.getInfo = function () {
+        return `${this.title} costs ${this.price} uah`;
+    }
+    this.getTotal = function() {
+        return this.amount * this.price;
+    }
 }
+Product.prototype = new ProductPrototype();
+const product1 = new Product('Fruits', 50, 3);
+console.log(product1.getInfo());
+console.log(product1.getTotal());
 
-const city1 = new City('Zaporozhye', 'Ukraine', '2000000');
-console.log(city1.getFullInfo());
-console.log(city1.toString());
+const title = {
+    title: 'HTML',
+}
+const titleEvents = {
+    showTitle() {
+        return this.title;
+    }
+}
+title.__proto__ = titleEvents;
+console.log(title.showTitle());
