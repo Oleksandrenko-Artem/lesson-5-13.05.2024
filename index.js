@@ -879,37 +879,79 @@
 // console.log(circle1.getPerimetr());
 // console.log(circle1.getDiametr());
 
-/**
- * 
- * @param {string} title 
- * @param {number} price 
- * @param {number} amount 
- */
-function Product(title, price, amount) {
-    this.title = title;
-    this.price = price;
-    this.amount = amount;
-}
-function ProductPrototype() {
-    this.getInfo = function () {
-        return `${this.title} costs ${this.price} uah`;
-    }
-    this.getTotal = function() {
-        return this.amount * this.price;
-    }
-}
-Product.prototype = new ProductPrototype();
-const product1 = new Product('Fruits', 50, 3);
-console.log(product1.getInfo());
-console.log(product1.getTotal());
+// /**
+//  * 
+//  * @param {string} title 
+//  * @param {number} price 
+//  * @param {number} amount 
+//  */
+// function Product(title, price, amount) {
+//     this.title = title;
+//     this.price = price;
+//     this.amount = amount;
+// }
+// function ProductPrototype() {
+//     this.getInfo = function () {
+//         return `${this.title} costs ${this.price} uah`;
+//     }
+//     this.getTotal = function() {
+//         return this.amount * this.price;
+//     }
+// }
+// Product.prototype = new ProductPrototype();
+// const product1 = new Product('Fruits', 50, 3);
+// console.log(product1.getInfo());
+// console.log(product1.getTotal());
 
-const title = {
-    title: 'HTML',
-}
-const titleEvents = {
-    showTitle() {
-        return this.title;
-    }
-}
-title.__proto__ = titleEvents;
-console.log(title.showTitle());
+// const title = {
+//     title: 'HTML',
+//     123:123
+// }
+// const titleEvents = {
+//     showTitle() {
+//         return this.title;
+//     }
+// }
+// title.__proto__ = titleEvents;
+// console.log(title.showTitle());
+
+const colors = ['red', 'orange', 'yellow', 'green'];
+console.log(colors);
+console.log(colors.length);
+console.log(colors[0]);
+
+const numbers = new Array(18, 43, 65, 12);
+console.log(numbers);
+console.log(numbers.length);
+
+const friendsNames = ['Vlad', 'Maksym', 'Nikita'];
+friendsNames.push('Dima');
+friendsNames.unshift('Ilya');
+console.log(friendsNames);
+const deleteLastName = friendsNames.pop();
+console.log(deleteLastName);
+const deleteFirstName = friendsNames.shift();
+console.log(deleteFirstName);
+console.log(friendsNames);
+console.log(friendsNames.length);
+
+const season = ['Winter', 'Spring', 'Summer', 'Autumn'];
+season.push('Summer');
+const deleteWinter1 = season.shift();
+season.push('Winter');
+season.unshift('Autumn');
+const deleteWinter2 = season.pop();
+console.log(season);
+console.log(season.length);
+
+const fruits = [];
+console.log(fruits);
+fruits.push('Яблуко', 'Мандарин', 'Кокос');
+fruits.unshift('Манго', 'Банан');
+console.log(fruits);
+const deleteFruits1 = fruits.pop();
+const deleteFruits2 = fruits.pop();
+fruits.unshift(deleteFruits1);
+fruits.unshift(deleteFruits2);
+console.log(fruits);
+console.log(fruits.length);
