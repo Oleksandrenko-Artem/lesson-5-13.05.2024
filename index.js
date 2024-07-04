@@ -955,3 +955,35 @@ fruits.unshift(deleteFruits1);
 fruits.unshift(deleteFruits2);
 console.log(fruits);
 console.log(fruits.length);
+
+const names = ['Anna', 'Max', 'Otto', 'Leo'];
+const deleteName1 = names.shift();
+const deleteName2 = names.pop();
+names.push(deleteName1);
+names.unshift(deleteName2);
+
+const indexOtto = names.indexOf('Otto');
+console.log(indexOtto);
+
+const deleteCount = 1;
+names.splice(indexOtto, deleteCount, 'Jack')
+console.log(names);
+
+const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const deleteCountDay = 2;
+weekDays.splice(1, 2, 'Friday');
+weekDays.splice(0, 1, 'Saturday');
+weekDays.splice(2);
+console.log(weekDays);
+
+const favouriteColor = prompt('Ваш улюблений колір?');
+const userColors = ['Red', 'Orange', 'Yellow', 'Purple', 'Black', 'Blue'];
+if (userColors.includes(favouriteColor)) {
+    const index = userColors.indexOf(favouriteColor);
+    userColors.splice(index, 1);
+} else {
+    const userNumber = prompt(`Введіть число від 0 до ${userColors.length}`);
+    userColors.slice(Number(userNumber), 0, favouriteColor);
+}
+
+alert(favouriteColor);
