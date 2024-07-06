@@ -987,3 +987,6 @@ if (userColors.includes(favouriteColor)) {
 }
 
 alert(favouriteColor);
+
+const getPerimetrSquare = (side) => side * 4;
+const isAdult = (age, AGE_ADULT = 18) => age >= AGE_ADULT ? 'Adult' : 'Not adult';
