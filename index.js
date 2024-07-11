@@ -915,78 +915,153 @@
 // title.__proto__ = titleEvents;
 // console.log(title.showTitle());
 
-const colors = ['red', 'orange', 'yellow', 'green'];
-console.log(colors);
-console.log(colors.length);
-console.log(colors[0]);
+// const colors = ['red', 'orange', 'yellow', 'green'];
+// console.log(colors);
+// console.log(colors.length);
+// console.log(colors[0]);
 
-const numbers = new Array(18, 43, 65, 12);
+// const numbers = new Array(18, 43, 65, 12);
+// console.log(numbers);
+// console.log(numbers.length);
+
+// const friendsNames = ['Vlad', 'Maksym', 'Nikita'];
+// friendsNames.push('Dima');
+// friendsNames.unshift('Ilya');
+// console.log(friendsNames);
+// const deleteLastName = friendsNames.pop();
+// console.log(deleteLastName);
+// const deleteFirstName = friendsNames.shift();
+// console.log(deleteFirstName);
+// console.log(friendsNames);
+// console.log(friendsNames.length);
+
+// const season = ['Winter', 'Spring', 'Summer', 'Autumn'];
+// season.push('Summer');
+// const deleteWinter1 = season.shift();
+// season.push('Winter');
+// season.unshift('Autumn');
+// const deleteWinter2 = season.pop();
+// console.log(season);
+// console.log(season.length);
+
+// const fruits = [];
+// console.log(fruits);
+// fruits.push('Яблуко', 'Мандарин', 'Кокос');
+// fruits.unshift('Манго', 'Банан');
+// console.log(fruits);
+// const deleteFruits1 = fruits.pop();
+// const deleteFruits2 = fruits.pop();
+// fruits.unshift(deleteFruits1);
+// fruits.unshift(deleteFruits2);
+// console.log(fruits);
+// console.log(fruits.length);
+
+// const names = ['Anna', 'Max', 'Otto', 'Leo'];
+// const deleteName1 = names.shift();
+// const deleteName2 = names.pop();
+// names.push(deleteName1);
+// names.unshift(deleteName2);
+
+// const indexOtto = names.indexOf('Otto');
+// console.log(indexOtto);
+
+// const deleteCount = 1;
+// names.splice(indexOtto, deleteCount, 'Jack')
+// console.log(names);
+
+// const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+// const deleteCountDay = 2;
+// weekDays.splice(1, 2, 'Friday');
+// weekDays.splice(0, 1, 'Saturday');
+// weekDays.splice(2);
+// console.log(weekDays);
+
+// const favouriteColor = prompt('Ваш улюблений колір?');
+// const userColors = ['Red', 'Orange', 'Yellow', 'Purple', 'Black', 'Blue'];
+// if (userColors.includes(favouriteColor)) {
+//     const index = userColors.indexOf(favouriteColor);
+//     userColors.splice(index, 1);
+// } else {
+//     const userNumber = prompt(`Введіть число від 0 до ${userColors.length}`);
+//     userColors.slice(Number(userNumber), 0, favouriteColor);
+// }
+
+// alert(favouriteColor);
+
+// const getPerimetrSquare = (side) => side * 4;
+// const isAdult = (age, AGE_ADULT = 18) => age >= AGE_ADULT ? 'Adult' : 'Not adult';
+
+// const str1 = 'cat';
+// console.log(str1);
+// console.log(str1.length);
+
+// console.log(str1.charAt(0));
+
+// const firstLetter = str1.charAt(0);
+// console.log(firstLetter);
+
+// const firstLetterCode = str1.charCodeAt(0);
+// console.log(firstLetterCode);
+
+// const lastLetter = str1.at(-1);
+// console.log(lastLetter);
+
+// const str1UpperCase = str1.toUpperCase();
+// console.log(str1UpperCase);
+
+// const userName = ' bRad'; //Brad
+
+// const userNameTrim = userName.trim().toLowerCase();
+// console.log(userNameTrim);
+// const firstLetterName = userNameTrim.charAt(0).toUpperCase();
+// console.log(firstLetterName);
+// const lastLetterName = userNameTrim.slice(1);
+// console.log(lastLetterName);
+// console.log(userName);
+// const finalUserName = firstLetterName + lastLetterName;
+// console.log(finalUserName);
+
+// while (true) {
+//     const userName = prompt();
+//     const firstCodeSymvol = userName.trim().charCodeAt(0);
+//     if (firstCodeSymvol < 48 || firstCodeSymvol > 57) {
+//         break;
+//     }
+// }
+
+const numbers = [1, 5, 3, 2, 9, 8, 7, 5];
+const partArray = numbers.slice(2, 5);
+
 console.log(numbers);
-console.log(numbers.length);
+console.log(partArray);
 
-const friendsNames = ['Vlad', 'Maksym', 'Nikita'];
-friendsNames.push('Dima');
-friendsNames.unshift('Ilya');
-console.log(friendsNames);
-const deleteLastName = friendsNames.pop();
-console.log(deleteLastName);
-const deleteFirstName = friendsNames.shift();
-console.log(deleteFirstName);
-console.log(friendsNames);
-console.log(friendsNames.length);
+const string = 'ohhusersilifbjkg';
+const partString = string.slice(4, 5);
 
-const season = ['Winter', 'Spring', 'Summer', 'Autumn'];
-season.push('Summer');
-const deleteWinter1 = season.shift();
-season.push('Winter');
-season.unshift('Autumn');
-const deleteWinter2 = season.pop();
-console.log(season);
-console.log(season.length);
+console.log(string);
+console.log(partString);
 
-const fruits = [];
-console.log(fruits);
-fruits.push('Яблуко', 'Мандарин', 'Кокос');
-fruits.unshift('Манго', 'Банан');
-console.log(fruits);
-const deleteFruits1 = fruits.pop();
-const deleteFruits2 = fruits.pop();
-fruits.unshift(deleteFruits1);
-fruits.unshift(deleteFruits2);
-console.log(fruits);
-console.log(fruits.length);
-
-const names = ['Anna', 'Max', 'Otto', 'Leo'];
-const deleteName1 = names.shift();
-const deleteName2 = names.pop();
-names.push(deleteName1);
-names.unshift(deleteName2);
-
-const indexOtto = names.indexOf('Otto');
-console.log(indexOtto);
-
-const deleteCount = 1;
-names.splice(indexOtto, deleteCount, 'Jack')
-console.log(names);
-
-const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-const deleteCountDay = 2;
-weekDays.splice(1, 2, 'Friday');
-weekDays.splice(0, 1, 'Saturday');
-weekDays.splice(2);
-console.log(weekDays);
-
-const favouriteColor = prompt('Ваш улюблений колір?');
-const userColors = ['Red', 'Orange', 'Yellow', 'Purple', 'Black', 'Blue'];
-if (userColors.includes(favouriteColor)) {
-    const index = userColors.indexOf(favouriteColor);
-    userColors.splice(index, 1);
-} else {
-    const userNumber = prompt(`Введіть число від 0 до ${userColors.length}`);
-    userColors.slice(Number(userNumber), 0, favouriteColor);
+const fileType = 'title.qwerty.txt';
+const partFileName = fileType.trim().lastIndexOf('.');
+const format = fileType.trim().slice(partFileName + 1);
+switch (format) {
+    case 'txt':
+    case 'doc':
+        console.log('Text');
+        break;
+    case 'jpg':
+    case 'png':
+        console.log('Image');
+        break;
+    case 'exe':
+        console.log('Install');
+        break;
+    case 'html':
+    case 'css':
+    case 'js':
+        console.log('Web');
+        break;
+    default:
+        console.log('Unnamed file');
+        break;
 }
-
-alert(favouriteColor);
-
-const getPerimetrSquare = (side) => side * 4;
-const isAdult = (age, AGE_ADULT = 18) => age >= AGE_ADULT ? 'Adult' : 'Not adult';
