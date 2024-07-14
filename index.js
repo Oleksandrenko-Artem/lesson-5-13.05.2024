@@ -1123,3 +1123,14 @@ const meatProducts = products.filter((elem) => elem.category === 'meat');
 console.table(meatProducts);
 const productsFilter = products.filter((elem) => elem.amount < 30);
 console.table(productsFilter);
+
+function summa(...arguments) {
+    console.log(arguments);
+    return arguments.reduce((accumulator, elem) => accumulator + elem, 0);
+}
+
+console.log(summa);
+
+const newArrayNumbers = [1, 5, 9, 3, 1];
+
+console.log(summa(...newArrayNumbers));
