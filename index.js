@@ -1029,108 +1029,187 @@
 //     }
 // }
 
-const numbers = [1, 5, 3, 2, 9, 8, 7, 5];
-const partArray = numbers.slice(2, 5);
+// const numbers = [1, 5, 3, 2, 9, 8, 7, 5];
+// const partArray = numbers.slice(2, 5);
 
-console.log(numbers);
-console.log(partArray);
+// console.log(numbers);
+// console.log(partArray);
 
-const string = 'ohhusersilifbjkg';
-const partString = string.slice(4, 5);
+// const string = 'ohhusersilifbjkg';
+// const partString = string.slice(4, 5);
 
-console.log(string);
-console.log(partString);
+// console.log(string);
+// console.log(partString);
 
-const fileType = 'title.qwerty.txt';
-const partFileName = fileType.trim().lastIndexOf('.');
-const format = fileType.trim().slice(partFileName + 1);
-switch (format) {
-    case 'txt':
-    case 'doc':
-        console.log('Text');
-        break;
-    case 'jpg':
-    case 'png':
-        console.log('Image');
-        break;
-    case 'exe':
-        console.log('Install');
-        break;
-    case 'html':
-    case 'css':
-    case 'js':
-        console.log('Web');
-        break;
-    default:
-        console.log('Unnamed file');
-        break;
+// const fileType = 'title.qwerty.txt';
+// const partFileName = fileType.trim().lastIndexOf('.');
+// const format = fileType.trim().slice(partFileName + 1);
+// switch (format) {
+//     case 'txt':
+//     case 'doc':
+//         console.log('Text');
+//         break;
+//     case 'jpg':
+//     case 'png':
+//         console.log('Image');
+//         break;
+//     case 'exe':
+//         console.log('Install');
+//         break;
+//     case 'html':
+//     case 'css':
+//     case 'js':
+//         console.log('Web');
+//         break;
+//     default:
+//         console.log('Unnamed file');
+//         break;
+// }
+
+// const number = 301;
+// console.log(number, typeof number);
+// const numToStr = String(number);
+// console.log(numToStr, typeof numToStr);
+// const arrStr = numToStr.split('');
+// console.log(arrStr, typeof arrStr);
+// const arrNums = arrStr.map((elem) => Number(elem));
+// const summa = arrNums.reduce((accumulator, elem) => accumulator + elem);
+// console.log(summa, typeof summa);
+
+// const result = String(number)
+//     .split('')
+//     .map((elem) => Number(elem))
+//     .reduce((accumulator, elem) => accumulator + elem);
+// const minNumber = Number(String(number).split('').sort().at(0))
+// const maxNumber = Number(String(number).split('').sort().at(-1))
+// console.log(minNumber);
+// console.log(maxNumber);
+
+// const newNumbers = [5, 172, 1, 10];
+// const numbersSorted = newNumbers.toSorted((a, b) => a - b);
+// const numbersSortedReverse = numbersSorted.toReversed();
+// console.log(newNumbers);
+// console.log(numbersSorted);
+// console.log(numbersSortedReverse);
+
+// const products = [
+//     {id: 1, title: 'milk', price: 30.45, amount: 50, category: 'milk & cheeses'},
+//     {id: 3, title: 'chees', price: 330.75, amount: 5, category: 'milk & cheeses'},
+//     {id: 2, title: 'beef', price: 250.15, amount: 7, category: 'meat'},
+//     {id: 8, title: 'chicken', price: 130.20, amount: 100, category: 'meat'},
+//     {id: 7, title: 'cookie', price: 33.00, amount: 65, category: 'cookie & bread'},
+//     {id: 27, title: 'bread', price: 20.50, amount: 14, category: 'cookie & bread'},
+//     {id: 6, title: 'yogurt', price: 30.45, amount: 23, category: 'milk & cheeses'},
+//     {id: 24, title: 'fish', price: 185.60, amount: 62, category: 'meat'}
+// ]
+// console.table(products);
+// const sortedProductByPrice = products.toSorted((a, b) => a.price - b.price);
+// const productWithMinPrice = sortedProductByPrice.at(0);
+// console.table(sortedProductByPrice);
+// console.table(productWithMinPrice);
+// const sortedProductByTitle = products.toSorted((a, b) => {
+//     if (a.title === b.title) {
+//         return 0;
+//     }
+//     if (a.title > b.title) {
+//         return 1;
+//     }
+//     if (a.title < b.title) {
+//         return -1;
+//     }
+// })
+// console.table(sortedProductByTitle);
+// const meatProducts = products.filter((elem) => elem.category === 'meat');
+// console.table(meatProducts);
+// const productsFilter = products.filter((elem) => elem.amount < 30);
+// console.table(productsFilter);
+
+// function summa(...arguments) {
+//     console.log(arguments);
+//     return arguments.reduce((accumulator, elem) => accumulator + elem, 0);
+// }
+
+// console.log(summa);
+
+// const newArrayNumbers = [1, 5, 9, 3, 1];
+
+// console.log(summa(...newArrayNumbers));
+
+const test = {
+    props1: 45,
+    Title: 'title object',
+    555: 1000,
+    age: 33,
+    1: '01'
 }
 
-const number = 301;
-console.log(number, typeof number);
-const numToStr = String(number);
-console.log(numToStr, typeof numToStr);
-const arrStr = numToStr.split('');
-console.log(arrStr, typeof arrStr);
-const arrNums = arrStr.map((elem) => Number(elem));
-const summa = arrNums.reduce((accumulator, elem) => accumulator + elem);
-console.log(summa, typeof summa);
-
-const result = String(number)
-    .split('')
-    .map((elem) => Number(elem))
-    .reduce((accumulator, elem) => accumulator + elem);
-const minNumber = Number(String(number).split('').sort().at(0))
-const maxNumber = Number(String(number).split('').sort().at(-1))
-console.log(minNumber);
-console.log(maxNumber);
-
-const newNumbers = [5, 172, 1, 10];
-const numbersSorted = newNumbers.toSorted((a, b) => a - b);
-const numbersSortedReverse = numbersSorted.toReversed();
-console.log(newNumbers);
-console.log(numbersSorted);
-console.log(numbersSortedReverse);
-
-const products = [
-    {id: 1, title: 'milk', price: 30.45, amount: 50, category: 'milk & cheeses'},
-    {id: 3, title: 'chees', price: 330.75, amount: 5, category: 'milk & cheeses'},
-    {id: 2, title: 'beef', price: 250.15, amount: 7, category: 'meat'},
-    {id: 8, title: 'chicken', price: 130.20, amount: 100, category: 'meat'},
-    {id: 7, title: 'cookie', price: 33.00, amount: 65, category: 'cookie & bread'},
-    {id: 27, title: 'bread', price: 20.50, amount: 14, category: 'cookie & bread'},
-    {id: 6, title: 'yogurt', price: 30.45, amount: 23, category: 'milk & cheeses'},
-    {id: 24, title: 'fish', price: 185.60, amount: 62, category: 'meat'}
-]
-console.table(products);
-const sortedProductByPrice = products.toSorted((a, b) => a.price - b.price);
-const productWithMinPrice = sortedProductByPrice.at(0);
-console.table(sortedProductByPrice);
-console.table(productWithMinPrice);
-const sortedProductByTitle = products.toSorted((a, b) => {
-    if (a.title === b.title) {
-        return 0;
-    }
-    if (a.title > b.title) {
-        return 1;
-    }
-    if (a.title < b.title) {
-        return -1;
-    }
-})
-console.table(sortedProductByTitle);
-const meatProducts = products.filter((elem) => elem.category === 'meat');
-console.table(meatProducts);
-const productsFilter = products.filter((elem) => elem.amount < 30);
-console.table(productsFilter);
-
-function summa(...arguments) {
-    console.log(arguments);
-    return arguments.reduce((accumulator, elem) => accumulator + elem, 0);
+console.log(test);
+for (const key in test) {
+    console.log(key, test[key]);
 }
 
-console.log(summa);
+const dictionary = new Map();
+dictionary.set('copy', 'копіювати');
+dictionary.set('subscribe', 'підписатися');
+dictionary.set('send', 'відправити');
+dictionary.set('share', 'поділитися');
+dictionary.set('add to cart', 'додати в корзину');
+dictionary.set('zoom', 'збільшити');
+dictionary.set('play', 'грати');
 
-const newArrayNumbers = [1, 5, 9, 3, 1];
+const word = prompt('enter any word');
+if (dictionary.has(word)) {
+    console.log(dictionary.get(word));
+} else {
+    console.log(word);
+}
 
-console.log(summa(...newArrayNumbers));
+const set = new Set();
+set.add(7);
+set.add(7);
+set.add('7');
+set.add(3 + 4);
+
+console.log(set);
+
+const numbers = [1, 2, 3, 1, 5, 4, 2, 3, 1, 7];
+const uniqSetNumbers = new Set(numbers);
+const uniqNumbers = [...uniqSetNumbers];
+console.log(uniqNumbers);
+
+const string = 'SyntaxError: Unexpected token costs Unexpected token';
+const word1 = 'subscribe';
+console.log(new Set(word1));
+console.log(new Set(string.toLowerCase()));
+console.log(new Set(string.split(' ')));
+
+const studentsWithGrade = new Map();
+
+function addNewStudent(dictionary, studentName) {
+    dictionary.set(studentName, []);
+}
+addNewStudent(studentsWithGrade, 'Alex');
+function addStudentNewGrade(dictionary, studentName, grade) {
+    if (dictionary.has(studentName)) {
+        const grades = dictionary.get(studentName);
+        grades.push(grade);
+        dictionary.set(studentName, grades);
+    } else {
+        dictionary.set(studentName, [grade]);
+    }
+}
+function getAverageGradeStudent(dictionary, studentName) {
+    if (dictionary.has(studentName)) {
+        const grades = dictionary.get(studentName);
+        const summaGrades = grades.reduce((sum, grade) => sum + grade);
+        return summaGrades/grades.length;
+    }
+}
+addStudentNewGrade(studentsWithGrade, 'Brad', 12);
+addStudentNewGrade(studentsWithGrade, 'Brad', 8);
+addStudentNewGrade(studentsWithGrade, 'Brad', 11);
+addNewStudent(studentsWithGrade, 'Anna');
+addStudentNewGrade(studentsWithGrade, 'Anna', 9);
+addStudentNewGrade(studentsWithGrade, 'Bob', 7);
+console.log(getAverageGradeStudent(studentsWithGrade, 'Brad').toFixed(2));
+console.log(studentsWithGrade);
