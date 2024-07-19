@@ -1135,81 +1135,178 @@
 
 // console.log(summa(...newArrayNumbers));
 
-const test = {
-    props1: 45,
-    Title: 'title object',
-    555: 1000,
-    age: 33,
-    1: '01'
-}
+// const test = {
+//     props1: 45,
+//     Title: 'title object',
+//     555: 1000,
+//     age: 33,
+//     1: '01'
+// }
 
-console.log(test);
-for (const key in test) {
-    console.log(key, test[key]);
-}
+// console.log(test);
+// for (const key in test) {
+//     console.log(key, test[key]);
+// }
 
-const dictionary = new Map();
-dictionary.set('copy', 'копіювати');
-dictionary.set('subscribe', 'підписатися');
-dictionary.set('send', 'відправити');
-dictionary.set('share', 'поділитися');
-dictionary.set('add to cart', 'додати в корзину');
-dictionary.set('zoom', 'збільшити');
-dictionary.set('play', 'грати');
+// const dictionary = new Map();
+// dictionary.set('copy', 'копіювати');
+// dictionary.set('subscribe', 'підписатися');
+// dictionary.set('send', 'відправити');
+// dictionary.set('share', 'поділитися');
+// dictionary.set('add to cart', 'додати в корзину');
+// dictionary.set('zoom', 'збільшити');
+// dictionary.set('play', 'грати');
 
-const word = prompt('enter any word');
-if (dictionary.has(word)) {
-    console.log(dictionary.get(word));
-} else {
-    console.log(word);
-}
+// const word = prompt('enter any word');
+// if (dictionary.has(word)) {
+//     console.log(dictionary.get(word));
+// } else {
+//     console.log(word);
+// }
 
-const set = new Set();
-set.add(7);
-set.add(7);
-set.add('7');
-set.add(3 + 4);
+// const set = new Set();
+// set.add(7);
+// set.add(7);
+// set.add('7');
+// set.add(3 + 4);
 
-console.log(set);
+// console.log(set);
 
-const numbers = [1, 2, 3, 1, 5, 4, 2, 3, 1, 7];
-const uniqSetNumbers = new Set(numbers);
-const uniqNumbers = [...uniqSetNumbers];
-console.log(uniqNumbers);
+// const numbers = [1, 2, 3, 1, 5, 4, 2, 3, 1, 7];
+// const uniqSetNumbers = new Set(numbers);
+// const uniqNumbers = [...uniqSetNumbers];
+// console.log(uniqNumbers);
 
-const string = 'SyntaxError: Unexpected token costs Unexpected token';
-const word1 = 'subscribe';
-console.log(new Set(word1));
-console.log(new Set(string.toLowerCase()));
-console.log(new Set(string.split(' ')));
+// const string = 'SyntaxError: Unexpected token costs Unexpected token';
+// const word1 = 'subscribe';
+// console.log(new Set(word1));
+// console.log(new Set(string.toLowerCase()));
+// console.log(new Set(string.split(' ')));
 
-const studentsWithGrade = new Map();
+// const studentsWithGrade = new Map();
 
-function addNewStudent(dictionary, studentName) {
-    dictionary.set(studentName, []);
-}
-addNewStudent(studentsWithGrade, 'Alex');
-function addStudentNewGrade(dictionary, studentName, grade) {
-    if (dictionary.has(studentName)) {
-        const grades = dictionary.get(studentName);
-        grades.push(grade);
-        dictionary.set(studentName, grades);
-    } else {
-        dictionary.set(studentName, [grade]);
+// function addNewStudent(dictionary, studentName) {
+//     dictionary.set(studentName, []);
+// }
+// addNewStudent(studentsWithGrade, 'Alex');
+// function addStudentNewGrade(dictionary, studentName, grade) {
+//     if (dictionary.has(studentName)) {
+//         const grades = dictionary.get(studentName);
+//         grades.push(grade);
+//         dictionary.set(studentName, grades);
+//     } else {
+//         dictionary.set(studentName, [grade]);
+//     }
+// }
+// function getAverageGradeStudent(dictionary, studentName) {
+//     if (dictionary.has(studentName)) {
+//         const grades = dictionary.get(studentName);
+//         const summaGrades = grades.reduce((sum, grade) => sum + grade);
+//         return summaGrades/grades.length;
+//     }
+// }
+// addStudentNewGrade(studentsWithGrade, 'Brad', 12);
+// addStudentNewGrade(studentsWithGrade, 'Brad', 8);
+// addStudentNewGrade(studentsWithGrade, 'Brad', 11);
+// addNewStudent(studentsWithGrade, 'Anna');
+// addStudentNewGrade(studentsWithGrade, 'Anna', 9);
+// addStudentNewGrade(studentsWithGrade, 'Bob', 7);
+// console.log(getAverageGradeStudent(studentsWithGrade, 'Brad').toFixed(2));
+// console.log(studentsWithGrade);
+
+class User{
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    logName() {
+        console.log(this.name);
     }
 }
-function getAverageGradeStudent(dictionary, studentName) {
-    if (dictionary.has(studentName)) {
-        const grades = dictionary.get(studentName);
-        const summaGrades = grades.reduce((sum, grade) => sum + grade);
-        return summaGrades/grades.length;
+
+const user = new User('Alex', 23);
+user.logName();
+
+
+class Pet {
+    constructor(type, name, age) {
+        this.type = type;
+        this.name = name;
+        this.age = age;
+    }
+    eat() {
+        return `${this.name} eating`;
+    }
+    sleap() {
+        return `${this.name} sleaping`;
+    }
+    walk() {
+        return `${this.name} walking`;
     }
 }
-addStudentNewGrade(studentsWithGrade, 'Brad', 12);
-addStudentNewGrade(studentsWithGrade, 'Brad', 8);
-addStudentNewGrade(studentsWithGrade, 'Brad', 11);
-addNewStudent(studentsWithGrade, 'Anna');
-addStudentNewGrade(studentsWithGrade, 'Anna', 9);
-addStudentNewGrade(studentsWithGrade, 'Bob', 7);
-console.log(getAverageGradeStudent(studentsWithGrade, 'Brad').toFixed(2));
-console.log(studentsWithGrade);
+
+const pets = new Pet('cat', 'Ray', 1);
+pets.eat();
+pets.sleap();
+pets.walk();
+console.log(pets.eat());
+
+class Book{
+    constructor(title, author) {
+        this.title = title;
+        this.author = author;
+        this.id = Book.count++;
+    }
+    static count = 0;
+    showInfo() {
+        return `${this.title} ${this.author}`;
+    }
+}
+
+const book1 = new Book('It', 'King');
+console.log(book1.showInfo());
+
+class Reader{
+    constructor(name) {
+        this.name = name;
+        this.id = Reader.count++;
+    }
+    static count = 0;
+    showInfo() {
+        return `Name = ${this.name} id = ${this.id}`;
+    }
+}
+
+const reader1 = new Reader('Alex');
+console.log(reader1.showInfo());
+
+class Library{
+    constructor() {
+        this.books = [];
+        this.readers = [];
+        this.booksAndReaders = [];
+    }
+    addBook(...book) {
+        this.books.push(...book);
+    }
+    addReader(...reader) {
+        this.readers.push(...reader);
+    }
+    addBookForReader(reader, book) {
+        this.booksAndReaders.push({idReader: reader.id, idBook: book.id});
+    }
+    showAllBooks() {
+        this.books.forEach((elem) => console.table(elem));
+    }
+}
+const bookLibrary1 = new Book('It', 'King');
+const bookLibrary2 = new Book('Autsider', 'King');
+const readerLibrary1 = new Reader('Max');
+const readerLibrary2 = new Reader('Anna');
+const library = new Library();
+library.addBook(bookLibrary1, bookLibrary2);
+library.addReader(readerLibrary1, readerLibrary2);
+library.addBookForReader(readerLibrary1, bookLibrary2);
+library.addBookForReader(readerLibrary2, bookLibrary1);
+console.log(library);
+library.showAllBooks();
