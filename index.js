@@ -1310,3 +1310,63 @@ library.addBookForReader(readerLibrary1, bookLibrary2);
 library.addBookForReader(readerLibrary2, bookLibrary1);
 console.log(library);
 library.showAllBooks();
+
+class Square{
+    #side;
+    constructor(side) {
+        this.side = side;
+    }
+    set side(value) {
+        if (typeof value !== 'number') {
+            throw new TypeError('type must be number!');
+        }
+        if (value <= 0) {
+            throw new RangeError('value must be positive');
+        }
+        this.#side = value;
+    }
+    get side() {
+        return this.#side;
+    }
+    getArea() {
+        return this.side ** 2;
+    }
+}
+try {
+    const square = new Square(4);
+    console.log(square.getArea());
+} catch (error) {
+    console.error(error);
+}
+class Circle{
+    #radius;
+    constructor(radius) {
+        this.radius = radius;
+    }
+    set radius(value) {
+        if (typeof value !== 'number') {
+            throw new TypeError('type must be number!');
+        }
+        if (value <= 0) {
+            throw new RangeError('value must be positive');
+        }
+        this.#radius = value;
+    }
+    get side() {
+        return this.#radius;
+    }
+    getArea() {
+        return this.radius ** 2;
+    }
+    getPerimetr() {
+        2 * Math.Pi * this.radius
+    }
+}
+try {
+    const circle = new Circle(6);
+    circle.radius = 8;
+    console.log(circle.getArea());
+    console.log(circle.getPerimetr);
+} catch (error) {
+    console.error(error);
+}
