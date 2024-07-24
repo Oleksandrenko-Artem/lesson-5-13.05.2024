@@ -1214,159 +1214,294 @@
 // console.log(getAverageGradeStudent(studentsWithGrade, 'Brad').toFixed(2));
 // console.log(studentsWithGrade);
 
-class User{
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
+// class User{
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+//     logName() {
+//         console.log(this.name);
+//     }
+// }
+
+// const user = new User('Alex', 23);
+// user.logName();
+
+
+// class Pet {
+//     constructor(type, name, age) {
+//         this.type = type;
+//         this.name = name;
+//         this.age = age;
+//     }
+//     eat() {
+//         return `${this.name} eating`;
+//     }
+//     sleap() {
+//         return `${this.name} sleaping`;
+//     }
+//     walk() {
+//         return `${this.name} walking`;
+//     }
+// }
+
+// const pets = new Pet('cat', 'Ray', 1);
+// pets.eat();
+// pets.sleap();
+// pets.walk();
+// console.log(pets.eat());
+
+// class Book{
+//     constructor(title, author) {
+//         this.title = title;
+//         this.author = author;
+//         this.id = Book.count++;
+//     }
+//     static count = 0;
+//     showInfo() {
+//         return `${this.title} ${this.author}`;
+//     }
+// }
+
+// const book1 = new Book('It', 'King');
+// console.log(book1.showInfo());
+
+// class Reader{
+//     constructor(name) {
+//         this.name = name;
+//         this.id = Reader.count++;
+//     }
+//     static count = 0;
+//     showInfo() {
+//         return `Name = ${this.name} id = ${this.id}`;
+//     }
+// }
+
+// const reader1 = new Reader('Alex');
+// console.log(reader1.showInfo());
+
+// class Library{
+//     constructor() {
+//         this.books = [];
+//         this.readers = [];
+//         this.booksAndReaders = [];
+//     }
+//     addBook(...book) {
+//         this.books.push(...book);
+//     }
+//     addReader(...reader) {
+//         this.readers.push(...reader);
+//     }
+//     addBookForReader(reader, book) {
+//         this.booksAndReaders.push({idReader: reader.id, idBook: book.id});
+//     }
+//     showAllBooks() {
+//         this.books.forEach((elem) => console.table(elem));
+//     }
+// }
+// const bookLibrary1 = new Book('It', 'King');
+// const bookLibrary2 = new Book('Autsider', 'King');
+// const readerLibrary1 = new Reader('Max');
+// const readerLibrary2 = new Reader('Anna');
+// const library = new Library();
+// library.addBook(bookLibrary1, bookLibrary2);
+// library.addReader(readerLibrary1, readerLibrary2);
+// library.addBookForReader(readerLibrary1, bookLibrary2);
+// library.addBookForReader(readerLibrary2, bookLibrary1);
+// console.log(library);
+// library.showAllBooks();
+
+// class Square{
+//     #side;
+//     constructor(side) {
+//         this.side = side;
+//     }
+//     set side(value) {
+//         if (typeof value !== 'number') {
+//             throw new TypeError('type must be number!');
+//         }
+//         if (value <= 0) {
+//             throw new RangeError('value must be positive');
+//         }
+//         this.#side = value;
+//     }
+//     get side() {
+//         return this.#side;
+//     }
+//     getArea() {
+//         return this.side ** 2;
+//     }
+// }
+// try {
+//     const square = new Square(4);
+//     console.log(square.getArea());
+// } catch (error) {
+//     console.error(error);
+// }
+// class Circle{
+//     #radius;
+//     constructor(radius) {
+//         this.radius = radius;
+//     }
+//     set radius(value) {
+//         if (typeof value !== 'number') {
+//             throw new TypeError('type must be number!');
+//         }
+//         if (value <= 0) {
+//             throw new RangeError('value must be positive');
+//         }
+//         this.#radius = value;
+//     }
+//     get side() {
+//         return this.#radius;
+//     }
+//     getArea() {
+//         return this.radius ** 2;
+//     }
+//     getPerimetr() {
+//         2 * Math.Pi * this.radius
+//     }
+// }
+// try {
+//     const circle = new Circle(6);
+//     circle.radius = 8;
+//     console.log(circle.getArea());
+//     console.log(circle.getPerimetr);
+// } catch (error) {
+//     console.error(error);
+// }
+
+class User {
+  #login;
+  constructor(login) {
+    this.login = login;
+  }
+  set login(value) {
+    if (typeof value !== 'string') {
+      throw new TypeError('type must be string');
     }
-    logName() {
-        console.log(this.name);
+    if (value.trim().length < 3 || value.trim().length > 15) {
+      throw new RangeError('length 3..15');
     }
+    this.#login = value;
+  }
+  get login() {
+    return this.#login;
+  }
+  showHi() {
+    return 'Hi, my login is ' + this.#login;
+  }
+  askQuetion() {
+    return 'my quetion: ....?';
+  }
 }
 
-const user = new User('Alex', 23);
-user.logName();
-
-
-class Pet {
-    constructor(type, name, age) {
-        this.type = type;
-        this.name = name;
-        this.age = age;
+class Moderator extends User {
+    #status
+    constructor(login, status) {
+        super(login);
+        this.status = status;
     }
-    eat() {
-        return `${this.name} eating`;
-    }
-    sleap() {
-        return `${this.name} sleaping`;
-    }
-    walk() {
-        return `${this.name} walking`;
-    }
-}
-
-const pets = new Pet('cat', 'Ray', 1);
-pets.eat();
-pets.sleap();
-pets.walk();
-console.log(pets.eat());
-
-class Book{
-    constructor(title, author) {
-        this.title = title;
-        this.author = author;
-        this.id = Book.count++;
-    }
-    static count = 0;
-    showInfo() {
-        return `${this.title} ${this.author}`;
-    }
-}
-
-const book1 = new Book('It', 'King');
-console.log(book1.showInfo());
-
-class Reader{
-    constructor(name) {
-        this.name = name;
-        this.id = Reader.count++;
-    }
-    static count = 0;
-    showInfo() {
-        return `Name = ${this.name} id = ${this.id}`;
-    }
-}
-
-const reader1 = new Reader('Alex');
-console.log(reader1.showInfo());
-
-class Library{
-    constructor() {
-        this.books = [];
-        this.readers = [];
-        this.booksAndReaders = [];
-    }
-    addBook(...book) {
-        this.books.push(...book);
-    }
-    addReader(...reader) {
-        this.readers.push(...reader);
-    }
-    addBookForReader(reader, book) {
-        this.booksAndReaders.push({idReader: reader.id, idBook: book.id});
-    }
-    showAllBooks() {
-        this.books.forEach((elem) => console.table(elem));
-    }
-}
-const bookLibrary1 = new Book('It', 'King');
-const bookLibrary2 = new Book('Autsider', 'King');
-const readerLibrary1 = new Reader('Max');
-const readerLibrary2 = new Reader('Anna');
-const library = new Library();
-library.addBook(bookLibrary1, bookLibrary2);
-library.addReader(readerLibrary1, readerLibrary2);
-library.addBookForReader(readerLibrary1, bookLibrary2);
-library.addBookForReader(readerLibrary2, bookLibrary1);
-console.log(library);
-library.showAllBooks();
-
-class Square{
-    #side;
-    constructor(side) {
-        this.side = side;
-    }
-    set side(value) {
-        if (typeof value !== 'number') {
-            throw new TypeError('type must be number!');
+    set status(value) {
+        if (typeof value !== 'string') {
+            throw new TypeError('Must be string');
         }
-        if (value <= 0) {
-            throw new RangeError('value must be positive');
+        if (value !== 'main' && value !== 'simple') {
+            throw new RangeError('Must be: main or simple');
         }
-        this.#side = value;
+        this.#status = value;
     }
-    get side() {
-        return this.#side;
+    showHi() {
+        return super.showHi() + ', my status - ' + this.#status;
     }
-    getArea() {
-        return this.side ** 2;
+    askQuetion() {
+        return 'I`m moderator, ' + super.askQuetion();
     }
 }
+const moderator = new Moderator('Bob', 'main');
+console.log(moderator);
+console.log(moderator.showHi());
+console.log(moderator.askQuetion());
+
 try {
-    const square = new Square(4);
-    console.log(square.getArea());
+    const user = new User('Anna');
+    console.log(user);
 } catch (error) {
     console.error(error);
 }
-class Circle{
-    #radius;
-    constructor(radius) {
-        this.radius = radius;
+function throwErrorNumber(value, minValue = 0) {
+    if (typeof value !== 'number' || value <= minValue) {
+        throw new Error('Invalid value');
     }
-    set radius(value) {
-        if (typeof value !== 'number') {
-            throw new TypeError('type must be number!');
+}
+class Product{
+    #name;
+    #price;
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    set name(value) {
+        if (typeof value !== 'string' || value.trim().length < 3) {
+            throw new Error('Invalid value');
         }
-        if (value <= 0) {
-            throw new RangeError('value must be positive');
-        }
-        this.#radius = value;
+        this.#name = value;
     }
-    get side() {
-        return this.#radius;
+    get name() {
+        return this.#name;
     }
-    getArea() {
-        return this.radius ** 2;
+    set price(value) {
+        throwErrorNumber(value);
+        this.#price = value;
     }
-    getPerimetr() {
-        2 * Math.Pi * this.radius
+    get price() {
+        return this.#price;
+    }
+    getInfo() {
+        return this.#name + ', price = ' + this.#price;
+    }
+}
+class RealProduct extends Product{
+    #weight;
+    constructor(name, price, weight) {
+        super(name, price);
+        this.weight = weight;
+    }
+    set weight(value) {
+        throwErrorNumber(value);
+        this.#weight = value;
+    }
+    get weight() {
+        return this.#weight;
+    }
+    getInfo() {
+        return super.getInfo() + ', weight = ' + this.#weight + 'kg';
+    }
+}
+class VirtualProduct extends Product{
+    #size;
+    constructor(name, price, size) {
+        super(name, price);
+        this.size = size;
+    }
+    set size(value) {
+        throwErrorNumber(value);
+        this.#size = value;
+    }
+    get size() {
+        return this.#size;
+    }
+    getInfo() {
+        return super.getInfo() + ', size = ' + this.#size + 'Mb';
     }
 }
 try {
-    const circle = new Circle(6);
-    circle.radius = 8;
-    console.log(circle.getArea());
-    console.log(circle.getPerimetr);
+    const milk = new Product('milk', 40);
+    console.log(milk.getInfo());
+    const disk = new RealProduct('music disk', 154, 0.05);
+    console.log(disk.getInfo());
+    const albom = new VirtualProduct('New albom', 200, 110);
+    console.log(albom.getInfo());
 } catch (error) {
     console.error(error);
 }
